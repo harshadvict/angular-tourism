@@ -1,0 +1,86 @@
+.fullbackground{
+    background-color: khaki;
+}
+
+.hotel{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.hotelcard{
+    margin: 20px;
+}
+.hotelBackground{
+    background-image: url("../../assets/backimage.png");
+    background-repeat:no-repeat; 
+    height: 565px;
+    width: 100%;
+    background-size: 100% 100%;
+    border: none;
+    overflow:auto; 
+    display:inline-block;
+    
+}
+.readonly{
+    width: 500px;
+    margin-left: 550px;
+    padding-top: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.alignReadonly{
+    display: flex;
+    flex-direction: row;
+}
+.searchVisible{
+    display: none;
+}
+.visibleHotelForm{
+    display:none;
+}
+.hotelDataForm{
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    margin-top: 40px;
+
+    width: 600px;
+    height: 200px;
+    padding-top: 30px;
+    border-radius: 50px;
+    -moz-box-shadow: 5px 5px 5px grey;
+    -webkit-box-shadow: 5px 5px 5px grey;
+    box-shadow: 5px 5px 5px grey;
+}
+.option_size{
+    width: 80px;
+}
+.check_in{
+    margin-left: 30px;
+    width: 180px;
+}
+.check_out{
+    margin-left: 10px;
+}
+.noperson{
+    margin-left: 20px;
+}
+.button_align{
+    margin-left: 230px;
+}
+.cardmargin{
+    margin:15px;
+}
+.displayLocation{
+    display:none;
+}
+.locationCard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

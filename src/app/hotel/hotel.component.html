@@ -1,0 +1,149 @@
+<!------------------------ form to select country to search the hotel (start) -------------------------------->
+<div class="fullbackground hotelBackground">
+  <form class="readonly" [class.searchVisible]="visiblePro" #myForm="ngForm">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Place name"
+          name="tourPlace"
+          ngModel
+        />
+      </div>
+      <div class="col">
+        <a
+          class="nav-link"
+          routerLink="searchHotel"
+          routerLinkActive="active"
+          class="btn btn-dark"
+          (click)="removeSearch(myForm)"
+          >Search</a
+        >
+      </div>
+    </div>
+  </form>
+  <!------------------------ form to select the country to search the hotel (start) -------------------------------->
+
+  <!------------------------ form to show location in the country to search the hotel (start) -------------------------------->
+
+  <div class="hotel " [class.displayLocation]="displayLoc">
+    <p class="display-4 font-italic">Best location for hotel</p>
+    <div *ngFor="let data of hotelData" class="hotelcard" class="locationCard">
+      <div *ngFor="let data1 of data.entities">
+        <div class="card cardmargin" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">{{ data1.caption }}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Id:-{{ data1.destinationId }}</li>
+            <li class="list-group-item">Place:-{{ data1.name }}</li>
+          </ul>
+          <div class="card-body">
+            <button
+              type="submit"
+              class="btn btn-info"
+              (click)="showId(data1.destinationId)"
+            >
+              See hotel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------ form to select the location in the country to search the hotel (finished) -------------------------------->
+
+  <!-- ---------------form to fill the data to search the hotel ------------------------>
+  <div [class.visibleHotelForm]="hotelFormVisible">
+    <form class="hotelDataForm" #form="ngForm" (ngSubmit)="hotelEnquiry(form)">
+      <div class="form-row">
+        <div class="form-group check_in">
+          <label for="inputZip">Check-In-date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="inputZip"
+            name="checkin"
+            ngModel
+          />
+        </div>
+        <div class="form-group check_out">
+          <label for="inputZip">Check-Out-date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="inputZip"
+            name="checkout"
+            ngModel
+          />
+        </div>
+        <div class="form-group noperson">
+          <label for="inputState">No of person</label>
+          <select
+            id="inputState"
+            class="form-control option_size"
+            name="person"
+            ngModel
+          >
+            <option selected>0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary option_size button_align">
+        Check
+      </button>
+    </form>
+  </div>
+  <!------------------------ form to fill the data to search the hotel (finished) -------------------------------->
+  
+
+  <!-- ---------------------------------hotel to be shown part start from here---------------------------------- -->
+
+  <div *ngFor="let newdata of hotel" class="Display">
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img [src]="newdata.thumbnailUrl" class="card-img" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ newdata.name }}</h5>
+            <p class="card-text">
+              {{ newdata.address.locality }}
+            </p>
+            <p class="card-text">
+              {{ newdata.address.streetAddress }}
+            </p>
+            <p class="card-text">
+              {{ newdata.address.countryName }}
+            </p>
+            <p class="card-text">
+              {{ newdata.address.postalCode }}
+            </p>
+            <p class="card-text">
+              {{ newdata.guestReviews.rating }}
+            </p>
+            <p class="card-text">
+              <small class="text-muted">{{
+                newdata.ratePlan.price.current
+              }}</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- ---------------------------------hotel to be shown part start end here---------------------------------- -->
+</div>

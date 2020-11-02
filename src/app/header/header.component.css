@@ -1,0 +1,28 @@
+.dark{
+    background-color:#80d4ff;
+}
+.background{
+        background-image: url("../../assets/frontImage.png");
+        background-repeat:no-repeat; 
+        height: 565px;
+        width: 100%;
+        background-size: 100% 100%;
+        border: none;
+        margin-top: 0px;
+        padding-top: 100px;
+}
+.view{
+    display: none;
+}
+.cSize{
+    margin-left: 270px;
+    margin-top: 30px;
+    height: 500px;
+    width: 800px;
+}
+.svgPadd{
+    margin-right: 20px;
+}
+.user{
+    display: none;
+}

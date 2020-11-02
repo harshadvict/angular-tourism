@@ -1,0 +1,17 @@
+.hotel{
+    width: 500px;
+    height: 500px;
+}
+.hotel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.hotelcard{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+}
+.check{
+    height: 20px;
+}

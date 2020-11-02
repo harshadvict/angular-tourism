@@ -1,0 +1,27 @@
+.place{
+    display: flex;
+    flex-direction: row;
+    
+}
+.box-flight{
+    margin-left: 400px;
+    width: 600px;
+    height: 340px;
+    border: 1px solid black;
+    padding: 40px;
+    padding-bottom: 60px;
+    border-radius: 50px;
+}
+.box-form{
+    height: 300px;
+}
+.Background{
+    background-image: url("../../assets/backimage.png");
+    background-repeat:no-repeat; 
+    height: 565px;
+    width: 100%;
+    background-size: 100% 100%;
+    border: none;
+    margin-top: 0px;
+    padding-top: 100px;
+} 
